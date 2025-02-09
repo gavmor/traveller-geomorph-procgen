@@ -20,7 +20,12 @@
   },
   "dependencies": {
     "@benchristel/taste": "0.5.0",
-    "preact": "^10.11.0"
+    "@react-three/drei": "^9.121.4",
+    "@react-three/fiber": "^8.17.14",
+    "konva": "^9.3.18",
+    "preact": "^10.25.4",
+    "preact-reconciler": "^0.1.8",
+    "react-konva": "18"
   },
   "scripts": {
     "build": "vite build",
