@@ -32,4 +32,18 @@ export default defineConfig({
             "react-reconciler": "preact-reconciler",
         },
     },
+    build: {
+        rollupOptions: {
+            output: {
+                manualChunks: (id) => {
+                    if (id.includes("three-mesh-bvh")) return "three-mesh-bvh"
+                    if (id.includes("three-stdlib")) return "three-stdlib"
+                    if (id.includes("three-text")) return "three-text"
+                    if (id.includes("three-utils")) return "three-utils"
+                    if (id.includes("drei")) return "drei"
+                    if (id.includes("fiber")) return "fiber"
+                },
+            },
+        },
+    },
 })
